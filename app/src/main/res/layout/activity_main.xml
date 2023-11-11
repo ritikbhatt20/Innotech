@@ -1,74 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/splashscreen"
     tools:context=".MainActivity">
-<!--jdnbfmmnfjdk-->
+
+
     <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="251dp"
-        android:layout_height="180dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.232" />
+        android:id="@+id/imageView"
+        android:layout_width="170dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:src="@drawable/acciaidpng"
+        android:layout_marginTop="220dp"/>
 
-    <EditText
-        android:id="@+id/textView1"
-        android:layout_width="206dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="376dp"
-        android:background="@color/white"
-        android:hint="EMAIL ADDRESS"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
-
-    <EditText
-        android:id="@+id/textView2"
-        android:layout_width="206dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="460dp"
-        android:background="@color/white"
-        android:hint="PASSWORD"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="SIGN IN"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.31"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="137dp"
-        tools:layout_editor_absoluteY="184dp" />
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_gravity="center"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="Acci Aid"
+        android:textColor="@color/white"
+        android:fontFamily="@font/armata"
+        android:textSize="23dp"
+        android:textStyle="bold" />
+</LinearLayout>
 

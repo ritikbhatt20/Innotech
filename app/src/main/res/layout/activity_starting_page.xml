@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/greybg"
+    tools:context=".StartingPageActivity">
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageView3"
+        android:layout_width="390dp"
+        android:layout_height="238dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        app:shapeAppearanceOverlay="@style/roundImageView"
+        app:srcCompat="@drawable/mainpagepic" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/be_vietnam_bold"
+        android:gravity="center"
+        android:text="TextView"
+        android:textColor="@color/black"
+        android:textSize="28dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Textview"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/be_vietnam"
+        android:textSize="15dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="130dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/be_vietnam_semibold"
+            android:textSize="16dp"
+            android:text="Register" />
+
+        <Button
+            android:id="@+id/btnSignIn"
+            android:layout_width="130dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="80dp"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/be_vietnam_semibold"
+            android:text="Sign In"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+    </LinearLayout>
+</LinearLayout>

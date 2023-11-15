@@ -14,8 +14,7 @@
         android:layout_width="390dp"
         android:layout_height="238dp"
         android:layout_marginTop="20dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_gravity="center"
         android:layout_marginBottom="10dp"
         app:shapeAppearanceOverlay="@style/roundImageView"
         app:srcCompat="@drawable/mainpagepic" />

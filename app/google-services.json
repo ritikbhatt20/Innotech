@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "270919990255",
+    "project_id": "innotech-61988",
+    "storage_bucket": "innotech-61988.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:270919990255:android:0b11faa269acdf2b4cd41a",
+        "android_client_info": {
+          "package_name": "com.example.innotech"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGkPb3Qm8q6Ld7yV_LwmzJKb85aeBwyUU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

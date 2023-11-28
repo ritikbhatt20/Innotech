@@ -1,48 +1,31 @@
 package com.example.innotech
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import android.util.Log
-import android.widget.Toast
-import androidx.recyclerview.widget.LinearLayoutManager
-
-import com.google.android.gms.maps.CameraUpdateFactory
-import com.google.android.gms.maps.GoogleMap
-import com.google.android.gms.maps.OnMapReadyCallback
-import com.google.android.gms.maps.SupportMapFragment
-import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.maps.model.MarkerOptions
-import com.example.innotech.databinding.ActivityMapsBinding
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 import android.Manifest
 import android.content.pm.PackageManager
+import android.os.Bundle
 import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
-import kotlin.properties.Delegates
 
-class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
+class LocationActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMapsBinding
-    private lateinit var mMap: GoogleMap
+    private lateinit var longitudeTxt: TextView
+    private lateinit var latitudeTxt: TextView
+
     private lateinit var fusedLocationClient: FusedLocationProviderClient
     private val LOCATION_PERMISSION_REQUEST_CODE = 1001
-    private var latitude: Double = 0.0
-    private var longitude: Double = 0.0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_maps)
+        setContentView(R.layout.activity_location)
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
-        val mapFragment = supportFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
-        mapFragment.getMapAsync(this)
+        latitudeTxt = findViewById(R.id.lat)
+        longitudeTxt = findViewById(R.id.lon)
 
         if (ContextCompat.checkSelfPermission(
                 this,
@@ -68,6 +51,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                 Manifest.permission.ACCESS_COARSE_LOCATION
             ) != PackageManager.PERMISSION_GRANTED
         ) {
+            // Request location permissions
             ActivityCompat.requestPermissions(
                 this,
                 arrayOf(
@@ -77,15 +61,27 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                 LOCATION_PERMISSION_REQUEST_CODE
             )
         } else {
+            // Permissions are already granted, proceed with getting location
             fusedLocationClient.lastLocation
                 .addOnSuccessListener { location ->
+                    // Got last known location. Use it if available.
                     if (location != null) {
-                        latitude = location.latitude
-                        longitude = location.longitude
-                        val mapFragment =
-                            supportFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
-                        mapFragment.getMapAsync(this)
+                        val latitude = location.latitude
+                        val longitude = location.longitude
+
+                        latitudeTxt.text = latitude.toString()
+                        longitudeTxt.text = longitude.toString()
+
+                        // Get nearest ambulance data from intent
+                        val nearestAmbulanceLatitude = intent.getDoubleExtra("latitude", 0.0)
+                        val nearestAmbulanceLongitude = intent.getDoubleExtra("longitude", 0.0)
+
+                        // Display nearest ambulance data
+                        // You might want to perform additional actions with this data
+                        // (e.g., show it on the map, calculate distance, etc.)
+                        Toast.makeText(this,"Nearest Ambulance: Lat $nearestAmbulanceLatitude, Lon $nearestAmbulanceLongitude", Toast.LENGTH_LONG).show()
                     } else {
+                        // Handle the case where location is null
                         Toast.makeText(this, "Location is null", Toast.LENGTH_SHORT).show()
                     }
                 }
@@ -102,16 +98,11 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
             if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 requestLocationUpdates()
             } else {
+                // Handle the case where the user denied the location permission
                 Toast.makeText(this, "User denied Permission", Toast.LENGTH_SHORT).show()
             }
         }
     }
-
-    override fun onMapReady(googleMap: GoogleMap) {
-        mMap = googleMap
-        val sydney = LatLng(latitude, longitude)
-        mMap.addMarker(MarkerOptions().position(sydney).title("Your current Location"))
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
-        mMap.mapType = GoogleMap.MAP_TYPE_NORMAL
-    }
 }
+
+

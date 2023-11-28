@@ -14,20 +14,8 @@
         android:layout_width="170dp"
         android:layout_height="150dp"
         android:layout_gravity="center"
-        android:src="@drawable/acciaidpng"
-        android:layout_marginTop="220dp"/>
+        android:layout_marginTop="220dp"
+        android:src="@drawable/acciaidpng" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="12dp"
-        android:gravity="center"
-        android:text="Acci Aid"
-        android:textColor="@color/white"
-        android:fontFamily="@font/armata"
-        android:textSize="23dp"
-        android:textStyle="bold" />
 </LinearLayout>
 

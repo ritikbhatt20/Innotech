@@ -38,6 +38,7 @@ android {
     }
 }
 
+
 dependencies {
 
     implementation 'androidx.core:core-ktx:1.8.0'
@@ -54,4 +55,14 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
     implementation 'com.squareup.picasso:picasso:2.8'
     implementation 'com.google.android.gms:play-services-location:18.0.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.1'
+    implementation 'com.google.maps:google-maps-services:0.15.0'
+    implementation 'com.mapbox.navigation:android:2.17.1'
+//    implementation 'com.mapbox.mapboxsdk:mapbox-android-sdk:10.2.9'
+//    implementation 'com.mapbox.maps:android:10.16.2'
+//    implementation 'com.mapbox.mapboxsdk:mapbox-sdk-geojson:5.8.0'
+//    implementation 'com.mapbox.mapboxsdk:mapbox-sdk-services:5.8.0'
+//    implementation 'com.mapbox.mapboxsdk:mapbox-android-navigation:0.42.0'
+//    implementation 'com.mapbox.mapboxsdk:mapbox-android-plugin-annotation-v9:0.11.0' // This is for the annotations plugin
+
 }

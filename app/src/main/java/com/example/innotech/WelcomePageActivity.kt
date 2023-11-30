@@ -24,7 +24,7 @@ class WelcomePageActivity : AppCompatActivity() {
         btnAmbulance.setOnClickListener {
 
             val retrofitBuilder = Retrofit.Builder()
-                .baseUrl("https://ambulance-drivers-api-springboot.onrender.com/")
+                .baseUrl("https://ambulance-drivers-api-using-springboot.onrender.com/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
                 .create(ApiInterface::class.java)
@@ -58,7 +58,7 @@ class WelcomePageActivity : AppCompatActivity() {
 
                         if (nearestAmbulance != null) {
                             // Add a marker to the map for the nearest ambulance
-                            val intent = Intent(this@WelcomePageActivity, LocationActivity::class.java)
+                            val intent = Intent(this@WelcomePageActivity, MapsActivity::class.java)
                             intent.putExtra("latitude", nearestAmbulance!!.latitude.toDouble())
                             intent.putExtra("longitude", nearestAmbulance!!.longitude.toDouble())
                             startActivity(intent)

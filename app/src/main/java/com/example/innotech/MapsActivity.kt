@@ -197,7 +197,7 @@ class MapsActivity : AppCompatActivity() {
 //                    locationComponentSettings?.pulsingEnabled = true
 //                    return@updateSettings null
 //                }
-                val bitmap = BitmapFactory.decodeResource(resources, R.drawable.location_pin)
+                val bitmap = BitmapFactory.decodeResource(resources, R.drawable.ambulance)
                 val annotationPlugin = mapView?.annotations
                 val pointAnnotationManager = annotationPlugin?.createPointAnnotationManager(mapView!!)
                 val point = Point.fromLngLat(ambulanceLongitude, ambulanceLatitude)

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splashscreen"
+    tools:context=".PharmacyActivity">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/pharmacyPic"
+        android:layout_width="366dp"
+        android:layout_height="229dp"
+        android:background="@drawable/imagebg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.093"
+        app:srcCompat="@drawable/pharmacty" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/archivo"
+        android:text="Acci Aid Pharmacy"
+        android:textColor="@color/white"
+        android:textSize="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.542" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="Your Medicines in your hand Anytime-Anywhere at reasonable costs"
+        android:textSize="15dp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/getBtn"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:layout_gravity="end"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/white"
+        android:text="GET"
+        android:textColor="#098AF1"
+        android:textSize="19dp"
+        app:icon="@drawable/baseline_arrow_forward_24"
+        app:iconGravity="textStart"
+        app:iconSize="25dp"
+        app:iconTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.945"
+        app:layout_constraintStart_toStartOf="parent"
+        app:rippleColor="@android:color/holo_green_light" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/skipBtn"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:layout_gravity="end"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/white"
+        android:text="Skip"
+        android:textColor="#098AF1"
+        android:textSize="19dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.099"
+        app:layout_constraintStart_toStartOf="parent"
+        app:rippleColor="@android:color/holo_red_dark" />
+</androidx.constraintlayout.widget.ConstraintLayout>

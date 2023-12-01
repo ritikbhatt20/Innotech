@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DoctorListActivity">
+
+    <include layout="@layout/custom_toolbar"/>
+
+    <!--    <LinearLayout-->
+<!--        android:id="@+id/linearDrMarcusHorizon5"-->
+<!--        style="@style/groupStylecornerRadius_1"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="60dp"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:paddingStart="@dimen/_7pxh"-->
+<!--        android:paddingTop="@dimen/_6pxv"-->
+<!--        android:paddingEnd="@dimen/_7pxh"-->
+<!--        android:paddingBottom="@dimen/_6pxv"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/imageDrMarcusHorizon5"-->
+<!--            android:layout_width="@dimen/_111pxh"-->
+<!--            android:layout_height="@dimen/_111pxh"-->
+<!--            android:layout_gravity="center_vertical"-->
+<!--            android:cornerRadius="@{@dimen/_12pxh}"-->
+<!--            android:imageRes="@{@drawable/img_profile_pic}"-->
+<!--            android:scaleType="fitXY"-->
+<!--            tools:ignore="ContentDescription"-->
+<!--            tools:src="@drawable/img_profile_pic" />-->
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/linearSeventyEight5"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:gravity="start"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/txtTitle5"-->
+<!--                style="@style/txtIntersemibold18"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:ellipsize="end"-->
+<!--                android:singleLine="true"-->
+<!--                android:text="@string/msg_dr_marcus_horizon"-->
+<!--                tools:text="@string/msg_dr_marcus_horizon" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/txtChardiologist5"-->
+<!--                style="@style/txtIntermedium12_2"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:ellipsize="end"-->
+<!--                android:singleLine="true"-->
+<!--                android:text="@string/lbl_chardiologist"-->
+<!--                tools:text="@string/lbl_chardiologist" />-->
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/linearRatting5"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal">-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/imageImage5"-->
+<!--                    android:layout_width="@dimen/_13pxh"-->
+<!--                    android:layout_height="@dimen/_13pxh"-->
+<!--                    android:layout_gravity="center_vertical"-->
+<!--                    android:scaleType="fitXY"-->
+<!--                    android:src="@drawable/img_star"-->
+<!--                    tools:ignore="ContentDescription"-->
+<!--                    tools:src="@drawable/img_star" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/txtRatting5"-->
+<!--                    style="@style/txtIntermedium12_1"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:ellipsize="end"-->
+<!--                    android:gravity="center_vertical"-->
+<!--                    android:singleLine="true"-->
+<!--                    android:text="@string/lbl_4_72"-->
+<!--                    tools:text="@string/lbl_4_72" />-->
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/linearDistance5"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal">-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/imageMaway5"-->
+<!--                    android:layout_width="@dimen/_13pxh"-->
+<!--                    android:layout_height="@dimen/_13pxh"-->
+<!--                    android:layout_gravity="top"-->
+<!--                    android:scaleType="fitXY"-->
+<!--                    android:src="@drawable/img_location"-->
+<!--                    tools:ignore="ContentDescription"-->
+<!--                    tools:src="@drawable/img_location" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/txtDistance5"-->
+<!--                    style="@style/txtIntermedium12_2"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:ellipsize="end"-->
+<!--                    android:gravity="center_vertical"-->
+<!--                    android:singleLine="true"-->
+<!--                    android:text="@string/lbl_800m_away"-->
+<!--                    tools:text="@string/lbl_800m_away" />-->
+<!--            </LinearLayout>-->
+<!--        </LinearLayout>-->
+<!--    </LinearLayout>-->
+<!--    -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:listitem="@layout/rvhome_list_item"
+        >
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

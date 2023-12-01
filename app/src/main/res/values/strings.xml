@@ -1,6 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Innotech</string>
+    <string name="app_name">innotech</string>
     <string name="title_activity_maps">MapsActivity</string>
     <string name="mapbox_access_token">pk.eyJ1Ijoicml0aWtiaGF0dDIwIiwiYSI6ImNscGowa3ExMzA1YWkybGw2b3I5eGV2NGcifQ.vNe7Z6izCyX16z55ClcR3Q</string>
-
 </resources>
